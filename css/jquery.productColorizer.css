@@ -1,0 +1,352 @@
+
+.mask {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.secondary {
+	left:0;
+	top:0;
+    position: absolute;
+  
+}
+
+/* swatch styles
+--------------------------------------------- */
+/*.swatch {
+	position:relative;
+}*/
+
+.swatch:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 70;
+}
+
+.swatch a.active span {
+border-radius: 50%;
+height:100%;	width:100%;
+
+}
+
+/* tooltip styles
+--------------------------------------------- */
+.colorizer-tooltip {
+  display: none;
+  position:absolute;
+  padding:5px;
+  font-size:8px;
+  -moz-box-shadow:0 0 5px #666;
+  -webkit-box-shadow:0 0 5px #666;
+  box-shadow:0 0 5px #666;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  background:#fff;
+  top:34px;
+}
+
+.colorizer-pointer-up,.colorizer-pointer-up-inner {
+  position:absolute;
+  width:0;
+  height:0;
+  border-top-width:0;
+  background:none;
+}
+
+.colorizer-pointer-up {
+  border-left:4px solid #ccc;
+  border-right:4px solid #ccc;
+  border-bottom-width:14px;
+  top:7px;
+  right:auto;
+  left:50%;
+  margin-left:-7px;
+  box-shadow:0 0 3px #333;
+}
+
+.colorizer-pointer-up-inner {
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-bottom:7px solid white;
+  bottom:auto;
+  top:-14px;
+  left:-5px;
+}
+
+@media only screen and (max-width :768px) 
+{
+#logo-mask1 {
+   position: absolute;
+    top:310px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+
+	.product-preview .product {
+	
+width:720px!important;
+	height:auto!important;
+}
+
+}
+@media only screen and (max-width :736px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:310px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :688px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:290px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :680px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:280px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :652px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:270px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :624px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:260px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+
+@media only screen and (max-width :620px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:256px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+	.product-preview .product {
+	
+	width:100%!important;
+	height:auto!important;
+}
+
+	
+}
+
+	@media only screen and (max-width :580px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:235px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :540px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:225px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+	.product-preview .product {
+	
+	width:100%!important;
+	height:auto!important;
+}
+	
+}
+@media only screen and (max-width :520px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:220px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+		@media only screen and (max-width :500px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:200px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+	@media only screen and (max-width :464px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:190px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+			@media only screen and (max-width :452px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:185px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+	@media only screen and (max-width :424px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:170px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+			@media only screen and (max-width :412px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:165px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :391px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:157px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+
+ 		@media only screen and (max-width :377px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:151px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+		@media only screen and (max-width :375px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:150px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+ 
+
+			@media only screen and (max-width :364px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:143px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+	
+}
+	@media only screen and (max-width :350px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:138px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+	
+
+}
+		@media only screen and (max-width :320px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:123px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :328px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:130px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+ @media only screen and (max-width :296px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:112px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+
+@media only screen and (max-width :244px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:96px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :236px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:87px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :208px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:75px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}
+@media only screen and (max-width :200px) 
+{
+	#logo-mask1 {
+   position: absolute;
+    top:60px!important;
+    left: 0px!important;
+    /* width: 221px; */
+}
+}

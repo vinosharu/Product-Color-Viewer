@@ -1,0 +1,375 @@
+<html>
+<head>
+    <title>Product Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/mobileui.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.productColorizer.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/gen.css" />
+    <style>
+        #coat-mask {
+            transform: scale(0.56);
+            -webkit-transform: scale(0.56);
+        }
+        
+        #vest-mask {
+            transform: scale(0.56);
+            -webkit-transform: scale(0.56);
+        }
+        
+        #pant-mask {
+            transform: scale(0.56);
+            -webkit-transform: scale(0.56);
+        }
+        
+        svg {
+            height: 660px;
+        }
+        
+        #sel_cont {
+            height: 55%;
+            position: relative;
+        }
+        
+        .product-preview .product {
+            width: 300px!important;
+            height: auto;
+            padding: 0px;
+            border: none!important;
+        }
+        
+        .swipper-gallery {
+            height: 250px;
+        }
+        
+        .secondary {
+            height: 0vw;
+            width: 0vw;
+            fill-opacity: 0.7;
+        }
+        
+        .swatch a span {
+            border-radius: 10%;
+            width: 60%;
+            height: 60%;
+        }
+        
+        .swatch a.active span {
+            border-radius: 10%;
+            width: 60%;
+            height: 60%;
+        }
+        
+        .product-preview .swatch a {
+            padding: 0px;
+            border: none;
+        }
+        
+        button {
+            display: inline;
+            font-size: 0.8em;
+            color: white;
+        }
+        
+        a {
+            border-style: none;
+        }
+    </style>
+</head>
+
+<body class="has-header">
+
+    <div class="header grey-800">   
+        <h1 class="align-center">Products Viewer</h1>
+    </div>
+
+    <div class="product-preview">
+        <div class="row-center white">
+            <div class="product list radius no-border">
+                <img src="images/suit-vest.png" alt="Shirt Image" />
+
+                <div id="pant-mask" role="m 189.5571,312.66088 36.41849,1.35721 9.27427,-2.03581 7.23846,-3.84543 9.50048,-9.72668 6.78605,-11.9887 10.97079,-25.3346 4.07163,16.96514 5.31574,12.8935 6.22055,9.50047 9.16117,8.48257 11.7625,5.99435 30.87654,0.5655 14.92932,-2.26201 -0.3393,14.92931 -7.01226,50.3299 -11.31009,71.47977 -8.14326,79.17063 -15.38172,116.72012 -5.88125,0.90481 -14.92932,0.90481 h -9.04807 l -12.2149,-3.16683 1.80962,-48.85959 1.80961,-13.5721 0.4524,-8.59567 0.90481,-27.14422 1.35721,-10.85768 v -50.6692 l -1.80961,-63.33651 -2.71442,-57.45525 -4.07164,30.76344 -5.88124,61.52689 v 42.52594 l -1.35721,8.59567 1.35721,5.42884 -3.61923,59.26487 -2.26202,37.09709 1.80962,22.62018 1.80961,33.93027 -45.69276,-0.4524 -5.42885,-47.04998 -4.07163,-50.21679 -0.9048,-42.07354 0.9048,-21.71537 0.45241,-9.04807 -4.52404,-56.55045 -5.42884,-84.59947 z" class="secondary"></div>
+
+                <div id="vest-mask" role="m 252.71914,58.22137 18.23416,44.78567 6.71785,-15.674984 11.51632,-25.271914 -9.91683,37.747922 -4.47856,17.274476 -3.83878,23.35252 -0.95969,-14.39539 -7.67754,-25.59181 z" class="secondary"></div>
+
+                <div id="coat-mask" role="m 142.35445,289.18747 39.34741,1.27959 0.6398,-39.66731 2.55918,-34.22905 2.23928,-27.51119 3.83877,-29.11069 4.47857,-27.5112 2.87908,6.71785 1.27959,30.71018 -1.27959,18.87396 -5.11836,26.23161 -4.47857,27.19129 -3.51887,32.62956 -1.59949,32.94946 13.7556,4.79847 31.98976,2.55918 13.7556,-5.75816 11.51631,-9.27703 7.35765,-14.71529 6.71785,-25.91171 5.11836,25.27191 7.99744,15.67499 7.35765,9.27703 14.71529,6.39795 14.71529,1.59949 16.63468,-0.6398 16.63468,-2.87908 7.99744,-5.11836 -3.83877,-38.06782 -5.43826,-49.26423 -3.51888,-42.22649 1.27959,-28.47089 3.51888,-16.95458 1.59949,16.63468 3.51887,29.75048 2.55918,37.42802 1.91939,29.75048 0.95969,28.4709 -0.3199,14.71529 39.98721,2.23928 -0.9597,-46.06526 -0.95969,-43.50608 -2.23928,-35.18874 -2.23929,-58.54127 L 393.4741,79.014717 388.35574,54.702496 379.07871,31.669866 337.81191,17.914267 319.89764,9.5969286 307.74153,-7.0351507e-7 304.22266,0.31989694 275.11197,116.76264 l -7.67754,-0.3199 -24.95202,-103.966733 -1.27959,-13.11580299 -5.11836,0.31989764 -1.59949,5.43825995 -60.46065,28.4708904 -4.47857,6.397953 -5.11836,14.395394 -9.59693,51.183621 -4.47857,51.50352 -6.71785,39.02751 -2.23928,55.3423 z" class="secondary"></div>
+
+            </div>
+        </div>
+
+        <!-- SLIDER STARTS -->
+        <div class="swiper-container swipper-gallery">
+            <div class="swiper-wrapper">
+                <!-- Add slide 1 -->
+                <div class="swiper-slide align-center">
+                    <h2 class="align-center text-strong padding text-red">Vest Color</h2>
+
+                    <!-- COLOR PALATTE STARTS -->
+                    <div id="sel_cont">
+                        <div id="slider" class="anim" style="z-index:10; width:1200%; height:100%; position:absolute; left:0%;">
+                            <div id="s_1_div" class="inslider" style="padding-top:0.25em; left:0%;              width:8.3333333333333%;">
+                                <div class="color_container_outer swatch">
+                                    <div class="color_container_inner align-center">
+                                        <div style="height:100%;">
+                                            <a rel="0,0,0" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_schwarz" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0,0,0,1); border-color:rgba(0,0,0,1);visibility:visible;">Black</button>
+                                            </a>
+                                            <a rel="128, 128, 128" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_grau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(128, 128, 128,1); border-color:rgba(128, 128, 128,1); visibility:visible;">Grey</button>
+                                            </a>
+                                            <a rel="255,255,255" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_weiss" data-spage="0" type="button" class="animfast color_button text-black" style="background:rgba(255,255,255,1); border-color:rgba(255,255,255,1); visibility:visible;">White</button>
+                                            </a>
+                                            <a rel="139, 69, 19" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_braun" data-spage="0" type="button" class="animfast color_button" style="background:rgba(139, 69, 19,1); border-color:rgba(139, 69, 19,1);visibility:visible;">Saddle brown</button>
+                                            </a>
+                                            <a rel="184, 134, 11" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_hellbraun" data-spage="0" type="button" class="animfast color_button" style=" background:rgba(184, 134, 11,1);color:white; visibility:visible;">Dark Golden Rod</button>
+                                            </a>
+                                            <a rel="255, 255, 0" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_gelb" data-spage="0" type="button" class="animfast color_button text-black" style="background:rgba(255, 255, 0,1); border-color:rgba(255, 255, 0,1);visibility:visible;">Yellow</button>
+                                            </a>
+                                            <a rel="143, 188, 139" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_olivgruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(143, 188, 139,1); border-color:rgba(143, 188, 139,1);visibility:visible;">Dark Sea Green</button>
+                                            </a>
+                                            <a rel="34, 139, 34" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_dunkelgruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(34, 139, 34,1); border-color:rgba(34, 139, 34,1);visibility:visible;">Forest green</button>
+                                            </a>
+                                            <a rel="0, 128, 128" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_kiwi" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 128, 128,1); border-color:rgba(0, 128, 128,1); visibility:visible;">Teal</button>
+                                            </a>
+                                            <a rel="128, 128, 0" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon gruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(128, 128, 0,1); border-color:rgba(128, 128, 0,1);visibility:visible;">Olive</button>
+                                            </a>
+                                            <a rel="176, 196, 222" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_tuerkis" data-spage="0" type="button" class="animfast color_button" style="background:rgba(176, 196, 222,1); border-color:rgba(176, 196, 222,1); visibility:visible;">Light Steel Blue</button>
+                                            </a>
+                                            <a rel="65, 105, 225" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_petrol" data-spage="0" type="button" class="animfast color_button" style="background:rgba(65, 105, 225,1); border-color:rgba(65, 105, 225,1); visibility:visible;">Royal Blue</button>
+                                            </a>
+                                            <a rel="0, 0, 128" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_blau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 0, 128,1); border-color:rgba(0, 0, 128,1);visibility:visible;">Navy</button>
+                                            </a>
+                                            <a rel="0, 191, 255" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_hellblau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 191, 255,1); border-color:rgba(0, 191, 255,1); visibility:visible;">Deep sky blue</button>
+                                            </a>
+                                            <a rel="95, 158, 160" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_himmelblau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(95, 158, 160,1); border-color:rgba(95, 158, 160,1); visibility:visible;">Cadet Blue</button>
+                                            </a>
+                                            <a rel="255, 69, 0" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_rot" data-spage="0" type="button" class="animfast color_button" style="background:rgba(255, 69, 0,1); border-color:rgba(255, 69, 0,1);visibility:visible;">Orange Red</button>
+                                            </a>
+                                            <a rel="220, 20, 60" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_kiwi" data-spage="0" type="button" class="animfast color_button" style="background:rgba(220, 20, 60,1); border-color:rgba(220, 20, 60,1); visibility:visible;">Crimson</button>
+                                            </a>
+                                            <a rel="255, 160, 122" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon orange" data-spage="0" type="button" class="animfast color_button" style="background:rgba(255, 160, 122,1); border-color:rgba(255, 160, 122,1);visibility:visible;">Light Salmon</button>
+                                            </a>
+                                            <a rel="218, 112, 214" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_gelb" data-spage="0" type="button" class="animfast color_button" style="background:rgba(218, 112, 214,1); border-color:rgba(218, 112, 214,1); visibility:visible;">Orchid</button>
+                                            </a>
+                                            <a rel="147, 112, 219" href="#vest-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon gelb" data-spage="0" type="button" class="animfast color_button" style="background:rgba(147, 112, 219,1); border-color:rgba(147, 112, 219,1); visibility:visible;">Medium Purple</button>
+                                            </a>
+
+                                            <input type="hidden" data-spage="0" data-sreq="true" name="sf2" value="schwarz"> </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- COLOR PALATTEE ENDS -->
+                </div>
+                <!-- Add slide 2 -->
+                <div class="swiper-slide text-white align-center">
+                    <h2 class="align-center text-red">Coat Color</h2>
+                    <!-- COLOR PALATTE STARTS -->
+                    <div id="sel_cont">
+                        <div id="slider" class="anim" style="z-index:10; width:1200%; height:100%; position:absolute; left:0%;">
+                            <div id="s_1_div" class="inslider" style="padding-top:0.25em; left:0%;              width:8.3333333333333%;">
+                                <div class="color_container_outer swatch">
+                                    <div class="color_container_inner align-center">
+                                        <div style="height:100%;">
+                                            <a rel="0,0,0" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_schwarz" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0,0,0,1); border-color:rgba(0,0,0,1);visibility:visible;">Black</button>
+                                            </a>
+                                            <a rel="128, 128, 128" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_grau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(128, 128, 128,1); border-color:rgba(128, 128, 128,1); visibility:visible;">Grey</button>
+                                            </a>
+                                            <a rel="255,255,255" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_weiss" data-spage="0" type="button" class="animfast color_button text-black" style="background:rgba(255,255,255,1); border-color:rgba(255,255,255,1); visibility:visible;">White</button>
+                                            </a>
+                                            <a rel="139, 69, 19" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_braun" data-spage="0" type="button" class="animfast color_button" style="background:rgba(139, 69, 19,1); border-color:rgba(139, 69, 19,1);visibility:visible;">Saddle brown</button>
+                                            </a>
+                                            <a rel="184, 134, 11" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_hellbraun" data-spage="0" type="button" class="animfast color_button" style=" background:rgba(184, 134, 11,1);color:white; visibility:visible;">Dark Golden Rod</button>
+                                            </a>
+                                            <a rel="87, 27, 126" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_gelb" data-spage="0" type="button" class="animfast color_button text-black" style="background:rgba(87, 27, 126,1); border-color:rgba(87, 27, 126,1);color:white;visibility:visible;">Purple Iris</button>
+                                            </a>
+                                            <a rel="143, 188, 139" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_olivgruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(143, 188, 139,1); border-color:rgba(143, 188, 139,1);visibility:visible;">Dark Sea Green</button>
+                                            </a>
+                                            <a rel="34, 139, 34" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_dunkelgruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(34, 139, 34,1); border-color:rgba(34, 139, 34,1);visibility:visible;">Forest green</button>
+                                            </a>
+                                            <a rel="0, 128, 128" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_kiwi" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 128, 128,1); border-color:rgba(0, 128, 128,1); visibility:visible;">Teal</button>
+                                            </a>
+                                            <a rel="128, 128, 0" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon gruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(128, 128, 0,1); border-color:rgba(128, 128, 0,1);visibility:visible;">Olive</button>
+                                            </a>
+                                            <a rel="176, 196, 222" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_tuerkis" data-spage="0" type="button" class="animfast color_button" style="background:rgba(176, 196, 222,1); border-color:rgba(176, 196, 222,1); visibility:visible;">Light Steel Blue</button>
+                                            </a>
+                                            <a rel="65, 105, 225" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_petrol" data-spage="0" type="button" class="animfast color_button" style="background:rgba(65, 105, 225,1); border-color:rgba(65, 105, 225,1); visibility:visible;">Royal Blue</button>
+                                            </a>
+                                            <a rel="0, 0, 128" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_blau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 0, 128,1); border-color:rgba(0, 0, 128,1);visibility:visible;">Navy</button>
+                                            </a>
+                                            <a rel="0, 191, 255" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_hellblau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 191, 255,1); border-color:rgba(0, 191, 255,1); visibility:visible;">Deep sky blue</button>
+                                            </a>
+                                            <a rel="95, 158, 160" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_himmelblau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(95, 158, 160,1); border-color:rgba(95, 158, 160,1); visibility:visible;">Cadet Blue</button>
+                                            </a>
+                                            <a rel="255, 69, 0" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_rot" data-spage="0" type="button" class="animfast color_button" style="background:rgba(255, 69, 0,1); border-color:rgba(255, 69, 0,1);visibility:visible;">Orange Red</button>
+                                            </a>
+                                            <a rel="220, 20, 60" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_kiwi" data-spage="0" type="button" class="animfast color_button" style="background:rgba(220, 20, 60,1); border-color:rgba(220, 20, 60,1); visibility:visible;">Crimson</button>
+                                            </a>
+                                            <a rel="255, 160, 122" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon orange" data-spage="0" type="button" class="animfast color_button" style="background:rgba(255, 160, 122,1); border-color:rgba(255, 160, 122,1);visibility:visible;">Light Salmon</button>
+                                            </a>
+                                            <a rel="218, 112, 214" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_gelb" data-spage="0" type="button" class="animfast color_button" style="background:rgba(218, 112, 214,1); border-color:rgba(218, 112, 214,1); visibility:visible;">Orchid</button>
+                                            </a>
+                                            <a rel="147, 112, 219" href="#coat-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon gelb" data-spage="0" type="button" class="animfast color_button" style="background:rgba(147, 112, 219,1); border-color:rgba(147, 112, 219,1); visibility:visible;">Medium Purple</button>
+                                            </a>
+
+                                            <input type="hidden" data-spage="0" data-sreq="true" name="sf2" value="schwarz"> </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- COLOR PALATTEE ENDS -->
+                </div>
+                <!-- Add slide 3 -->
+                <div class="swiper-slide text-white align-center">
+
+                    <h2 class="align-center text-red">Pant Color</h2>
+                    <!-- COLOR PALATTE STARTS -->
+                    <div id="sel_cont">
+                        <div id="slider" class="anim" style="z-index:10; width:1200%; height:100%; position:absolute; left:0%;">
+                            <div id="s_1_div" class="inslider" style="padding-top:0.25em; left:0%;              width:8.3333333333333%;">
+                                <div class="color_container_outer swatch">
+                                    <div class="color_container_inner align-center">
+                                        <div style="height:100%;">
+                                            <a rel="0,0,0" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_schwarz" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0,0,0,1); border-color:rgba(0,0,0,1);visibility:visible;">Black</button>
+                                            </a>
+                                            <a rel="128, 128, 128" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_grau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(128, 128, 128,1); border-color:rgba(128, 128, 128,1); visibility:visible;">Grey</button>
+                                            </a>
+                                            <a rel="255,255,255" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_weiss" data-spage="0" type="button" class="animfast color_button text-black" style="background:rgba(255,255,255,1); border-color:rgba(255,255,255,1); visibility:visible;">White</button>
+                                            </a>
+                                            <a rel="139, 69, 19" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_braun" data-spage="0" type="button" class="animfast color_button" style="background:rgba(139, 69, 19,1); border-color:rgba(139, 69, 19,1);visibility:visible;">Saddle brown</button>
+                                            </a>
+                                            <a rel="184, 134, 11" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_hellbraun" data-spage="0" type="button" class="animfast color_button" style=" background:rgba(184, 134, 11,1);color:white; visibility:visible;">Dark Golden Rod</button>
+                                            </a>
+                                            <a rel="52, 40, 44" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_gelb" data-spage="0" type="button" class="animfast color_button text-black" style="background:rgba(52, 40, 44,1); border-color:rgba(52, 40, 44,1);color:white;visibility:visible;">Charcoal</button>
+                                            </a>
+                                            <a rel="143, 188, 139" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_olivgruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(143, 188, 139,1); border-color:rgba(143, 188, 139,1);visibility:visible;">Dark Sea Green</button>
+                                            </a>
+                                            <a rel="34, 139, 34" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_dunkelgruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(34, 139, 34,1); border-color:rgba(34, 139, 34,1);visibility:visible;">Forest green</button>
+                                            </a>
+                                            <a rel="0, 128, 128" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_kiwi" data-spage="0" type="button" class="animfast color_button" style="background:rgba(0, 128, 128,1); border-color:rgba(0, 128, 128,1); visibility:visible;">Teal</button>
+                                            </a>
+                                            <a rel="128, 128, 0" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon gruen" data-spage="0" type="button" class="animfast color_button" style="background:rgba(128, 128, 0,1); border-color:rgba(128, 128, 0,1);visibility:visible;">Olive</button>
+                                            </a>
+                                            <a rel="176, 196, 222" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_tuerkis" data-spage="0" type="button" class="animfast color_button" style="background:rgba(176, 196, 222,1); border-color:rgba(176, 196, 222,1); visibility:visible;">Light Steel Blue</button>
+                                            </a>
+                                            <a rel="65, 105, 225" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_petrol" data-spage="0" type="button" class="animfast color_button" style="background:rgba(65, 105, 225,1); border-color:rgba(65, 105, 225,1); visibility:visible;">Royal Blue</button>
+                                            </a>
+                                            <a rel="94, 90, 128" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_blau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(94, 90, 128,1); border-color:rgba(94, 90, 128,1);visibility:visible;">Grape</button>
+                                            </a>
+                                            <a rel="130, 123, 96" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_hellblau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(130, 123, 96,1); border-color:rgba(130, 123, 96,1); visibility:visible;">Army Brown</button>
+                                            </a>
+                                            <a rel="95, 158, 160" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_himmelblau" data-spage="0" type="button" class="animfast color_button" style="background:rgba(95, 158, 160,1); border-color:rgba(95, 158, 160,1); visibility:visible;">Cadet Blue</button>
+                                            </a>
+                                            <a rel="70, 62, 63" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_rot" data-spage="0" type="button" class="animfast color_button" style="background:rgba(70, 62, 63,1); border-color:rgba(70, 62, 63,1);visibility:visible;">Black Eal</button>
+                                            </a>
+                                            <a rel="149, 69, 53" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_kiwi" data-spage="0" type="button" class="animfast color_button" style="background:rgba(149, 69, 53,1); border-color:rgba(149, 69, 53,1); visibility:visible;">Chestnut</button>
+                                            </a>
+                                            <a rel="84, 112, 75" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon orange" data-spage="0" type="button" class="animfast color_button" style="background:rgba(84, 112, 75,1); border-color:rgba(84, 112, 75,1);visibility:visible;">Hazel Green</button>
+                                            </a>
+                                            <a rel="105, 105, 105" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_gelb" data-spage="0" type="button" class="animfast color_button" style="background:rgba(105, 105, 105,1); border-color:rgba(105, 105, 105,1); visibility:visible;">Dim Grey</button>
+                                            </a>
+                                            <a rel="43, 87, 126" href="#pant-mask" class="color_button_container" style="width:16.666666666667%;">
+                                                <button id="colorbutton_riemen_neon gelb" data-spage="0" type="button" class="animfast color_button" style="background:rgba(43, 87, 126,1); border-color:rgba(43, 87, 126,1); visibility:visible;">Blue Jay</button>
+                                            </a>
+
+                                            <input type="hidden" data-spage="0" data-sreq="true" name="sf2" value="schwarz"> </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- COLOR PALATTEE ENDS -->
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+        </div>
+        <!-- SLIDER2 END -->
+    </div>
+
+    </div>
+
+    <script type="text/javascript">
+        new Swiper('.swipper-gallery', {
+            pagination: '.swiper-pagination'
+        });
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery.productColorizer.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/uimain.js"></script>
+</body>
+
+</html>
